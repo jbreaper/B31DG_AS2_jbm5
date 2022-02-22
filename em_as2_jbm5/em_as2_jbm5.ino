@@ -36,12 +36,14 @@ float average_analogue_in;
 int error_code;
 
 void setup(){
+    Serial.begin(57600);
     tick = 0;
     pinMode(WATCHDOG, OUTPUT);
     pinMode(WATCHDOG, OUTPUT);
     pinMode(PB1, INPUT);
     pinMode(A_IN, INPUT);
     ticker.attach_ms(1, tick_up);
+    Serial.print("Switch, \tFrequency, \tInput");
 }
 
 void tick_up() {
