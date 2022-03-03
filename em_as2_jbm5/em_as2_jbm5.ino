@@ -48,7 +48,16 @@ void setup(){
 
 void tick_up() {
     tick++;
-    ticked = true;
+
+    task_1();
+    if((tick%R_T2)==0) task_2();
+    if((tick%R_T3)==0) task_3();
+    if((tick%R_T4)==0) task_4();
+    if((tick%R_T5)==21) task_5();
+    if((tick%R_T6)==0) task_6();
+    if((tick%R_T7)==0) task_7();
+    if((tick%R_T8)==167) task_8();
+    if((tick%R_T9)==0) task_9();
 }
 
 void task_1(){
